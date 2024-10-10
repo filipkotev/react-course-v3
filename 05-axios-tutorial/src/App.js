@@ -1,13 +1,11 @@
 import Title from './components/Title';
-import PostRequest from './examples/3-post-request';
-
-
+import CustomInstance from './examples/5-custom-instance';
 
 function App() {
   return (
     <main>
       <Title />
-      <PostRequest />
+      <CustomInstance />
     </main>
   );
 }
