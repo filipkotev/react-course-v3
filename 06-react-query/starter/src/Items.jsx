@@ -6,7 +6,7 @@ const Items = () => {
   const { isLoading, data, error, isError } = useQuery({
     queryKey: ['tasks'],
     queryFn: async () => {
-      const { data } = await customFetch.get('/');
+      const { data } = await customFetch.get('/something');
       return data;
     }
   })
@@ -16,8 +16,12 @@ const Items = () => {
   }
 
   if (isError) {
-    return <p style={{marginTop: '1rem'}}>{error.message}</p>
+    return <p style={{marginTop: '1rem'}}>Thre was an error...</p>
   }
+
+  // if (error) {
+  //   return <p style={{marginTop: '1rem'}}>{error.response.data}</p>
+  // }
 
   return (
     <div className='items'>
