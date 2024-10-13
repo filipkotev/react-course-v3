@@ -224,6 +224,12 @@ ul {
   padding: 2rem 2.5rem;
   margin: 3rem auto;
 }
+
+.flex {
+  display: flex;
+  margin-top: 2rem;
+}
+
 .form-label {
   display: block;
   font-size: var(--small-text);
@@ -233,7 +239,8 @@ ul {
 }
 .form-input,
 .form-textarea {
-  width: 100%;
+  /* width: 100%; */
+  flex: 1;
   padding: 0.375rem 0.75rem;
   border-radius: var(--borderRadius);
   background: var(--backgroundColor);
@@ -335,8 +342,6 @@ Search Form
   max-width: var(--fixed-width);
   margin: 0 auto;
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
 }
 
 .search-input {
