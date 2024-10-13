@@ -1,10 +1,10 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { BsSortNumericDownAlt } from 'react-icons/bs';
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('cat');
 
   const toggleDarkTheme = () => {
     const newTheme = !isDarkTheme;
@@ -14,7 +14,7 @@ export const AppProvider = ({ children }) => {
     body.classList.toggle('dark-theme', newTheme);
   }
 
-  const value = { isDarkTheme, toggleDarkTheme }
+  const value = { isDarkTheme, toggleDarkTheme, searchTerm, setSearchTerm }
 
   return <AppContext.Provider value={value}>
     {children}
